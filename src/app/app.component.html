@@ -1,0 +1,25 @@
+<div class="todolist_wrapper">
+  <p class="top_title">TodoList</p>
+  <div class="todolist_section">
+    <div class="thing_header">
+      <input type="text" placeholder="请输入代办事项" [(ngModel)]="thing" (keyup)="handleEnter($event)">
+      <button (click)="handleAdd()">添加</button>
+    </div>
+    <ul class="thing_list" [hidden]="!(thingList.length > 0)">
+      <li *ngFor="let thing of thingList; let i = index">
+        <div class="left">
+          <input class="checkbox" type="checkbox" [checked]="thing.status" [(ngModel)]="thing.status" />
+          <span class="text">{{i+1}}{{thing.thingName}}</span>
+          <span class="status" [ngClass]="{'finish': thing.status}">{{thing.status ? '已完成' : '未完成'}}</span>
+        </div>
+        <span class="delete" (click)="handleDelete(i)">删除</span>
+      </li>
+    </ul>
+    <div class="thing_empty" [hidden]="thingList.length > 0">暂无待办事项</div>
+    <div class="thing_footer">
+      <div>共有：{{thingTotal}} 件事情</div>
+      <div>已完成：{{finishTotal}} 件</div>
+      <div>未完成：{{unfinishedTotal}} 件</div>
+    </div>
+  </div>
+</div>
