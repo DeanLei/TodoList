@@ -4,8 +4,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 
 const routes: Routes = [
   {
-    path: "index",
-    // component: TodoListComponent
+    path: "",
     loadChildren: () => import("./todo-list/todo-list.module")
                           .then(m => m.TodoListModule)
   }

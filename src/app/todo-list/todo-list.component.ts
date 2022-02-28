@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IThing {
-  thingName: string
-  status: Boolean
-}
+import { IThing } from './todo-list.dto';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,7 +7,7 @@ interface IThing {
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  public todo: string = "";
+  public todo: string = '';
   public todoList: IThing[] = [];
   public todoTotal = 0;
   public finishTotal = 0;
@@ -35,7 +31,7 @@ export class TodoListComponent implements OnInit {
     this.computedTotal()
   }
 
-  public computedTotal() {
+  public computedTotal(): void {
     this.todoTotal = this.todoList.length;
     this.unfinishedTotal = this.todoList.filter(todo => !todo.status).length
     this.finishTotal = this.todoTotal - this.unfinishedTotal
