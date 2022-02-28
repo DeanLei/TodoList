@@ -1,0 +1,30 @@
+.todo-list-input-container {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  input {
+    height: 30px;
+    width: 350px;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 2px;
+    &:focus {
+      border-color: #409883;
+    }
+  }
+  button {
+    width: 50px;
+    height: 30px;
+    background-color:#53c7a9 ;
+    color: #409883;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .3s;
+    &:hover {
+      background-color:rgb(110, 228, 196) ;
+    }
+  }
+}

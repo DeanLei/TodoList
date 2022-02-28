@@ -1,0 +1,15 @@
+.todo-list-container {
+  margin: 20px auto 0;
+  width: 500px;
+  .top-title {
+    font-size: 18px;
+    line-height: 1;
+    background-color: rgb(82, 199, 170);
+    color: #fff;
+    padding: 20px 10px;
+  }
+  .section {
+    background-color: rgb(243, 243, 243);
+    padding: 0 5px;
+  }
+}

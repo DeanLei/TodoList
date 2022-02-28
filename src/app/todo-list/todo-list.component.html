@@ -1,0 +1,8 @@
+<div class="todo-list-container">
+  <p class="top-title">TodoList</p>
+  <div class="section">
+    <app-todo-list-input [todo]="todo" (todoChange)="handleTodoChange($event)"></app-todo-list-input>
+    <app-todo-list-section [todoList]="todoList" (todoListChange)="handleTodoListChange($event)"></app-todo-list-section>
+    <app-todo-list-footer [total]="todoTotal" [finishTotal]="finishTotal" [unfinishedTotal]="unfinishedTotal"></app-todo-list-footer>
+  </div>
+</div>

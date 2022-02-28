@@ -1,0 +1,11 @@
+<ul class="todo-list-list-container" [hidden]="!(todoList.length > 0)">
+  <li *ngFor="let todo of todoList; let i = index">
+    <div class="left">
+      <input class="checkbox" type="checkbox" [checked]="todo.status" [(ngModel)]="todo.status" (ngModelChange)="handleTodoStatusChange()" />
+      <span class="text">{{i+1}}{{todo.thingName}}</span>
+      <span class="status" [ngClass]="{'finish': todo.status}">{{todo.status ? '已完成' : '未完成'}}</span>
+    </div>
+    <span class="delete" (click)="handleDelete(i)">删除</span>
+  </li>
+</ul>
+<div class="todo-list-empty" [hidden]="todoList.length > 0">暂无待办事项</div>
