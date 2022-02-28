@@ -13,7 +13,7 @@ export class TodoListInputComponent implements OnInit {
 
   public ngOnInit():void { }
 
-  public handleEnterTodo(event:any) {
+  public handleEnterTodo(event:any): void {
     if(event.keyCode === 13) {
       this.handleAddTodo()
     }
